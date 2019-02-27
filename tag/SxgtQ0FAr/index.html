@@ -23,44 +23,7 @@
     KAI Notes
   </h1>
   <p class="site-description">
-    人生得意寻尽欢，莫使金樽空对月
-<p id="hitokoto">:D 获取中...</p>
-<!-- 以下写法，选取一种即可 -->
-
-<!-- 现代写法，推荐 -->
-<!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
-<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-<!--End-->
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto; 
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
-
-<!-- 老式写法，兼容性最忧 -->
-<script>
-  var xhr = new XMLHttpRequest();
-  xhr.open('get', 'https://v1.hitokoto.cn');
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      var data = JSON.parse(xhr.responseText);
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto;
-    }
-  }
-  xhr.send();
-</script>
-
-<!-- 新 API 方法， 十分简洁 -->
+    <p id="hitokoto">:D 获取中...</p>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
   </p>
   <div class="menu-container">
@@ -128,8 +91,7 @@
         </a>
       
       <div class="post-abstract">
-        <p>各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”<br>跨过这个坑的我的经验，也许对你有用。</p>
-
+        <h3 id="各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”">各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”</h3><h3 id="跨过这个坑的我的经验，也许对你有用。">跨过这个坑的我的经验，也许对你有用。</h3>
       </di>
     </article>
   
@@ -173,7 +135,7 @@
 <script type="text/javascript" language="javascript">
     function setTime() {
         // 博客创建时间秒数，时间格式中，月比较特殊，是从0开始的，所以想要显示5月，得写4才行，如下
-        var create_time = Math.round(new Date(Date.UTC(2013, 4, 22, 0, 0, 0))
+        var create_time = Math.round(new Date(Date.UTC(2019, 1, 1, 0, 0, 0))
                 .getTime() / 1000);
         // 当前时间秒数,增加时区的差异
         var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
@@ -182,6 +144,7 @@
                 + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
                 + '秒';
         document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+
     }
     setInterval(setTime, 1000);
 </script>

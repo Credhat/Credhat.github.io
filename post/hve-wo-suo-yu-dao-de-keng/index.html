@@ -23,44 +23,7 @@
     KAI Notes
   </h1>
   <p class="site-description">
-    人生得意寻尽欢，莫使金樽空对月
-<p id="hitokoto">:D 获取中...</p>
-<!-- 以下写法，选取一种即可 -->
-
-<!-- 现代写法，推荐 -->
-<!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
-<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-<!--End-->
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto; 
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
-
-<!-- 老式写法，兼容性最忧 -->
-<script>
-  var xhr = new XMLHttpRequest();
-  xhr.open('get', 'https://v1.hitokoto.cn');
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      var data = JSON.parse(xhr.responseText);
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto;
-    }
-  }
-  xhr.send();
-</script>
-
-<!-- 新 API 方法， 十分简洁 -->
+    <p id="hitokoto">:D 获取中...</p>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
   </p>
   <div class="menu-container">
@@ -119,8 +82,7 @@
               
             </div>
             <div class="post-content">
-              <p>各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”<br>跨过这个坑的我的经验，也许对你有用。</p>
-<!-- more -->
+              <h3 id="各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”">各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”</h3><h3 id="跨过这个坑的我的经验，也许对你有用。">跨过这个坑的我的经验，也许对你有用。</h3><!-- more -->
 <h1 id="查找问题根源">查找问题根源</h1><blockquote>
 <p>话不多说，利用自带的 Developer Tool 查明问题<br><strong><code>Developer Tool</code></strong> 位于 <code>Hve Notes</code> 的<strong><em>左上角</em></strong> <code>Edit</code> 里<br>如图<br><img src="https://Credhat.github.io/post-images/1551245167384.Png" alt=""><br>点开以后右边便会弹出一个开发者工具界面，此时再点击 <strong><code>同步</code></strong><br><strong>静静等待</strong><br>1<br>2<br>3<br>4<br>通知出现 --“<code>同步失败，请联系开发者</code>”<br>出现以后便可以通过刚才打开的 <code>Developer Tool</code> 进行问题解读</p>
 </blockquote>
@@ -205,7 +167,7 @@
 <script type="text/javascript" language="javascript">
     function setTime() {
         // 博客创建时间秒数，时间格式中，月比较特殊，是从0开始的，所以想要显示5月，得写4才行，如下
-        var create_time = Math.round(new Date(Date.UTC(2013, 4, 22, 0, 0, 0))
+        var create_time = Math.round(new Date(Date.UTC(2019, 1, 1, 0, 0, 0))
                 .getTime() / 1000);
         // 当前时间秒数,增加时区的差异
         var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
@@ -214,6 +176,7 @@
                 + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
                 + '秒';
         document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+
     }
     setInterval(setTime, 1000);
 </script>
