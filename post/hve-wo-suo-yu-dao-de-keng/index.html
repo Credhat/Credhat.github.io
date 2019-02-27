@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | KAI Notes</title>
+<title>Hve--我所遇到的坑 | KAI Notes</title>
 <link rel="shortcut icon" href="https://Credhat.github.io/favicon.ico">
 <link rel="stylesheet" href="https://Credhat.github.io/styles/main.css">
 
@@ -64,21 +64,38 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              Hve--我所遇到的坑
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2019-02-27 ·
               </time>
               
             </div>
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
-
+              <p>各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”<br>跨过这个坑的我的经验，也许对你有用。</p>
+<!-- more -->
+<h1 id="查找问题根源">查找问题根源</h1><blockquote>
+<p>话不多说，利用自带的 Developer Tool 查明问题<br><strong><code>Developer Tool</code></strong> 位于 <code>Hve Notes</code> 的<strong><em>左上角</em></strong> <code>Edit</code> 里<br>如图<br><img src="https://Credhat.github.io/post-images/1551245167384.Png" alt=""><br>点开以后右边便会弹出一个开发者工具界面，此时再点击 <strong><code>同步</code></strong><br><strong>静静等待</strong><br>1<br>2<br>3<br>4<br>通知出现 --“<code>同步失败，请联系开发者</code>”<br>出现以后便可以通过刚才打开的 <code>Developer Tool</code> 进行问题解读</p>
+</blockquote>
+<h2 id="问题解决">问题解决</h2><p>我的问题我解读它返回的文本后解决了。<br>如图-我的问题<br><img src="https://Credhat.github.io/post-images/1551246048535.png" alt=""></p>
+<blockquote>
+<p>&quot;remote: error: GH007: Your push would publish a private email address.<br>这是我精炼的问题内容，解读就是<code>你推送的邮箱地址是一个私人保密邮箱地址</code><br>那么解决这个问题就需要把邮箱地址里的设置更改一下即可<br>如图<br><img src="https://Credhat.github.io/post-images/1551245861061.png" alt=""><br>在Github中将其取消勾选之后再进行同步（推送）<br>你便会看到<code>“同步成功”</code><br><img src="https://Credhat.github.io/post-images/1551246131262.Png" alt=""></p>
+</blockquote>
+<h3 id="ok，问题解决，其他的问题，我没有遇到过。">ok，问题解决，其他的问题，我没有遇到过。</h3><h3 id="但是，如果还不行，可以尝试一波重启，有许多小伙伴都说好">但是，如果还不行，可以尝试一波<code>重启</code>，有许多小伙伴都说好</h3>
             </div>
           </article>
         </div>
     
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://Credhat.github.io/post/hello-hve-notes">
+              <h3 class="post-title">
+                Hello Hve Notes
+              </h3>
+            </a>
+          </div>  
         
 
         
