@@ -1,132 +1,177 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>生活 | KAI Notes</title>
+    
+<meta charset="utf-8" >
+
+<title>生活 | 灼灼其华，暮暮烟月</title>
+<meta name="description" content="&lt;p id=&#34;hitokoto&#34;&gt;:D 获取中...&lt;/p&gt;
+&lt;script src=&#34;https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto&#34; style=&#34;color:blue&#34;defer&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 <link rel="shortcut icon" href="https://Credhat.github.io/favicon.ico">
 <link rel="stylesheet" href="https://Credhat.github.io/styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://Credhat.github.io">
-  <img class="avatar" src="https://Credhat.github.io/images/avatar.png" alt="" width="80px" height="80px">
-  </a>
-  <h1 class="site-title">
-    KAI Notes
-  </h1>
-  <p class="site-description">
-    <p id="hitokoto">:D 获取中...</p>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" style="color:blue"defer></script>
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-      
-        <a href="/post/tool" class="menu">
-          工具
-        </a>
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://Credhat.github.io">
+        <img class="avatar" src="https://Credhat.github.io/images/avatar.png" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://Credhat.github.io">
+        <h1 class="site-title">灼灼其华，暮暮烟月</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/tool" class="menu purple-link">
+            工具
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+
         <div class="current-tag-container">
-            <h2 class="title">
-                标签：#生活
-            </h2> 
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> 生活
+          </h2> 
         </div>
-        <div class="post-container">
-  
-    <article class="post">
+
+        
+<section class="post-item">
+    <div class="content">
       <a href="https://Credhat.github.io/post/hve-wo-suo-yu-dao-de-keng">
         <h2 class="post-title">Hve--我所遇到的坑</h2>
       </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-02-27 ·
-        </time>
-        
-          <a href="https://Credhat.github.io/tag/SxgtQ0FAr" class="post-tag">
-            # 坑
-          </a>
-        
-          <a href="https://Credhat.github.io/tag/Wcl1nkIV0" class="post-tag">
-            # 生活
-          </a>
-        
-      </div>
-      
-        <a href="https://Credhat.github.io/post/hve-wo-suo-yu-dao-de-keng" class="post-feature-image" style="background-image: url('https://Credhat.github.io/post-images/hve-wo-suo-yu-dao-de-keng.Png')">
-        </a>
-      
       <div class="post-abstract">
         <h3 id="各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”">各种步骤都是按照教程走，然而到自己点击同步上线的时候却是--“同步失败，请联系作者”</h3><h3 id="跨过这个坑的我的经验，也许对你有用。">跨过这个坑的我的经验，也许对你有用。</h3>
-      </di>
-    </article>
-  
-    <article class="post">
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-02-27</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://Credhat.github.io/tag/SxgtQ0FAr">
+                坑
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://Credhat.github.io/tag/Wcl1nkIV0">
+                生活
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <a href="https://Credhat.github.io/post/hve-wo-suo-yu-dao-de-keng">
+        <div class="feature-container" style="background-image: url('https://Credhat.github.io/post-images/hve-wo-suo-yu-dao-de-keng.Png')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
       <a href="https://Credhat.github.io/post/about">
         <h2 class="post-title">关于</h2>
       </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-01-25 ·
-        </time>
-        
-          <a href="https://Credhat.github.io/tag/Wcl1nkIV0" class="post-tag">
-            # 生活
-          </a>
-        
-      </div>
-      
-        <a href="https://Credhat.github.io/post/about" class="post-feature-image" style="background-image: url('https://Credhat.github.io/post-images/about.png')">
-        </a>
-      
       <div class="post-abstract">
         <p>这是关于的页面，可以在这里了解我！<br><strong>点击查看</strong></p>
 
-      </di>
-    </article>
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-01-25</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://Credhat.github.io/tag/Wcl1nkIV0">
+                生活
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <a href="https://Credhat.github.io/post/about">
+        <div class="feature-container" style="background-image: url('https://Credhat.github.io/post-images/about.png')">
+        </div>
+      </a>
+    
+  </section>
+
+
+<div class="pagination-container">
+  
   
 </div>
 
-        <div class="pagination-container">
-  
-  
-</div>
 
-        <div class="site-footer">
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan"><p id="hitokoto">:D 获取中...</p>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" style="color:blue"defer></script></div>
   Powered by Hve Notes
 <script>
     function secondToDate(second) {
@@ -175,11 +220,23 @@
    运行时间：<span id="htmer_time" style="color: red;"></span>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-      </div>
-    </div>
+
+
+
   </body>
 </html>

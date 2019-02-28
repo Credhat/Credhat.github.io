@@ -1,134 +1,142 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | KAI Notes</title>
+    
+<meta charset="utf-8" >
+
+<title>关于 | 灼灼其华，暮暮烟月</title>
+<meta name="description" content="&lt;p id=&#34;hitokoto&#34;&gt;:D 获取中...&lt;/p&gt;
+&lt;script src=&#34;https://v1.hitokoto.cn/?encode=js&amp;select=%23hitokoto&#34; style=&#34;color:blue&#34;defer&gt;&lt;/script&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 <link rel="shortcut icon" href="https://Credhat.github.io/favicon.ico">
 <link rel="stylesheet" href="https://Credhat.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://Credhat.github.io">
-  <img class="avatar" src="https://Credhat.github.io/images/avatar.png" alt="" width="80px" height="80px">
-  </a>
-  <h1 class="site-title">
-    KAI Notes
-  </h1>
-  <p class="site-description">
-    <p id="hitokoto">:D 获取中...</p>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" style="color:blue"defer></script>
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-      
-        <a href="/post/tool" class="menu">
-          工具
-        </a>
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://Credhat.github.io">
+        <img class="avatar" src="https://Credhat.github.io/images/avatar.png" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://Credhat.github.io">
+        <h1 class="site-title">灼灼其华，暮暮烟月</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/tool" class="menu purple-link">
+            工具
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              关于
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2019-01-25 ·
-              </time>
-              
-                <a href="https://Credhat.github.io/tag/Wcl1nkIV0" class="post-tags">
-                  # 生活
-                </a>
-              
-            </div>
-            <div class="post-content">
-              <p>这是关于的页面，可以在这里了解我！<br><strong>点击查看</strong></p>
+          <h2 class="post-title">关于</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-01-25</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://Credhat.github.io/tag/Wcl1nkIV0">
+                    生活
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>这是关于的页面，可以在这里了解我！<br><strong>点击查看</strong></p>
 <!-- more -->
 <h1 id="自我简介">自我简介</h1><blockquote>
 <p>名字：<a href="https://baike.baidu.com/item/%E4%BF%9D%E5%AF%86">保密</a><br>性别：<a href="https://baike.baidu.com/item/%E7%94%B7%E6%80%A7/766131?fr=aladdin">男</a><br>职业：<a href="https://baike.baidu.com/item/%E5%A4%A7%E5%AD%A6%E7%94%9F/1444">大学生</a><br>爱好：绘画、看电影、DIY、摄影等等，大多数都是<strong>我爱的</strong>，难以列举。</p>
 </blockquote>
 <p><img src="https://Credhat.github.io/post-images/1551328447537.png" alt=""></p>
 <h1 id="暂时还是个菜鸡，后面再补充出更完整的我">暂时还是个菜鸡，后面再补充出更完整的我</h1>
-            </div>
-          </article>
+          </div>
         </div>
-    
+
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://Credhat.github.io/post/hello-hve-notes">
+            <a class="purple-link" href="https://Credhat.github.io/post/hello-hve-notes">
               <h3 class="post-title">
-                Hello Hve Notes
+                下一篇：Hello Hve Notes
               </h3>
             </a>
-          </div>  
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
         
 
         
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+      
 
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: 'a5ac0d0b333ccb117c54',
-    clientSecret: '34514c15054eac296e4e49b1245ef8e7a2584925',
-    repo: 'Credhat.github.io',
-    owner: 'Credhat',
-    admin: ['Credhat'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-          
-
-          
-        
-    
-        <div class="site-footer">
+      <div class="site-footer">
+  <div class="slogan"><p id="hitokoto">:D 获取中...</p>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" style="color:blue"defer></script></div>
   Powered by Hve Notes
 <script>
     function secondToDate(second) {
@@ -177,11 +185,46 @@
    运行时间：<span id="htmer_time" style="color: red;"></span>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-      </div>
-    </div>
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'a5ac0d0b333ccb117c54',
+        clientSecret: '34514c15054eac296e4e49b1245ef8e7a2584925',
+        repo: 'Credhat.github.io',
+        owner: 'Credhat',
+        admin: ['Credhat'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
   </body>
 </html>
